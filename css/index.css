@@ -87,7 +87,13 @@ body{
 	.font span{
 		position: absolute;
 		left: 40%;
+		
 	}
+}
+.zhang{
+	position: absolute !important;
+	left:  200px;
+	text-decoration:none；
 }
 
 
