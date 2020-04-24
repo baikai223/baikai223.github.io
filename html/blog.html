@@ -44,12 +44,12 @@
 		<img src="../icon/head.png" alt="头像" class="round">
 		<p class="blog-user">BAIAKI</p>
 		<div class="icon-box">
-			<a href="http://weibo.com/u/5366939550" target="_blank" class="icon-cell bg-r icon-xinlang"></a>
+			<a href="http://weibo.com/u/2366939220" target="_blank" class="icon-cell bg-r icon-xinlang"></a>
 			<a href="https://rover-rx.tuchong.com/" target="_blank" class="icon-cell bg-y icon-tuchong"></a>
 			<a href="#" class="icon-cell bg-g icon-weixin" onclick="wei()"></a>
-			<a href="http://wpa.qq.com/msgrd?v=3&uin=1399564343&site=oicqzone.com&menu=yes"
+			<a href="http://wpa.qq.com/msgrd?v=3&uin=1399264343&site=oicqzone.com&menu=yes"
 				class="icon-cell bg-a icon-qq"></a>
-			<a href="https://github.com/rover95" target="_blank" class="icon-cell bg-h icon-github"></a>
+			<a href="https://github.com/rover92" target="_blank" class="icon-cell bg-h icon-github"></a>
 		</div>
 	</div>
 	<div id="main-body">
@@ -203,17 +203,17 @@ foo.getAge();    //  => 12
 var parm=222;
 function f1(){alert(111)}
 function f2(obj){alert(obj)}
-setTimeout(f1,500);//正确,无参数
+setTimeout(f1,200);//正确,无参数
 var test1=f2(parm);//执行一次f2函数
-setTimeout(f2,500);//undefined，传参失败
-setTimeout(f2(parm),500);//参数无效，传参失败
-setTimeout(function(parm){alert(parm)},500);//undefined，传参失败
+setTimeout(f2,200);//undefined，传参失败
+setTimeout(f2(parm),200);//参数无效，传参失败
+setTimeout(function(parm){alert(parm)},200);//undefined，传参失败
 document.getElementById("hello").onclick=f1;//正确
 
 //正确做法，使用闭包
 function f3(obj){return function(){alert(obj)}}
 var test2=f3(parm);//返回f3的内部函数的引用
-setTimeout(test2,500);//正确,222
+setTimeout(test2,200);//正确,222
 document.getElementById("hello").onclick=test2;//正确,222
 document.getElementById("hello").attachEvent("onclick",test2);//正确,222
 </code></pre>
@@ -260,12 +260,12 @@ document.getElementById("hello").attachEvent("onclick",test2);//正确,222
 								<meta>源信息。除了我们常用的定义编码、关键字<code>name="keywords"</code>、
 								描述<code>name="description"</code> (for SEO)，还可以定义视区大小、缩放比例等(for
 								移动端),以及，定义网页的过期时间，Cookie的过期时间等等</p>
-							<p>当前页面每5秒钟刷新一下</p>
-							<pre><code>&lt;meta http-equiv="refresh" content="5"></code></pre>
+							<p>当前页面每2秒钟刷新一下</p>
+							<pre><code>&lt;meta http-equiv="refresh" content="2"></code></pre>
 							<p>这个表示当前页面2秒后跳到首页</p>
 							<pre><code>&lt;meta http-equiv="refresh" content="2; url='/'"></code></pre>
-							<p>页面直接跳转到rover95.com</p>
-							<pre><code>&lt;meta http-equiv="refresh" content="0; url='http://rover95.com/'"></code></pre>
+							<p>页面直接跳转到rover92.com</p>
+							<pre><code>&lt;meta http-equiv="refresh" content="0; url='http://rover92.com/'"></code></pre>
 
 						</section>
 					</div>
@@ -297,7 +297,7 @@ document.getElementById("hello").attachEvent("onclick",test2);//正确,222
 					<div class="content">
 						<section>
 							<p>websql,IndexedDB</p>
-							<p>HTML5规范加入的在浏览器端运行的轻量级数据库</p>
+							<p>HTML2规范加入的在浏览器端运行的轻量级数据库</p>
 
 						</section>
 					</div>
@@ -429,7 +429,7 @@ for(var i in a){
 				<div class="text-body">
 					<div class="content">
 						<section>
-							<p>ES6已经提出几年了，今年6月好像ES8也出来了，可能出于习惯或者兼容性问题平常使用的主要还是ES5标准为主，但其中的几个新标准还是很好用的，尤其是'Template
+							<p>ES6已经提出几年了，今年6月好像ES8也出来了，可能出于习惯或者兼容性问题平常使用的主要还是ES2标准为主，但其中的几个新标准还是很好用的，尤其是'Template
 								String'，实在是太好用了，动态生成网页的时候再也不用一截一截拼字符串了。下面整理了几个常用的ES6新特性</p>
 							<pre><code>
 
@@ -449,7 +449,7 @@ for(var i in a){
 	class 之间可以使用 extends 关键字实现继承class Cat extends Animal{}
 	子类需要在constructor中使用 super() 使this指向父类的this指针。
 
-<h4>'arrow function'</h4>	function(i){ return i + 1; } //ES5
+<h4>'arrow function'</h4>	function(i){ return i + 1; } //ES2
 	(i) => i + 1 //ES6
 	=>前是传入参数，=>后是返回值，或者{}包裹的代码块，如果返回对象则加小括号({...})
 	箭头函数时，函数体内的this对象，就是定义时所在的对象，而不是使用时所在的对象
@@ -471,7 +471,7 @@ for(var i in a){
 	let zoo = {cat, dog} //{cat: "ken", dog: "lili"}
 
 <h4>'rest'</h4>	function t(...abc){console.log(abc);}
-	t(1,2,3,4,5,6)
+	t(1,2,3,4,2,6)
 	abc可以用操作数组的方法操作
 
 <h4>'default'</h4>	函数参数默认值 function(type='abc')
@@ -570,7 +570,7 @@ blacksheep
 $sql=$_POST['sql']; //sql通过前段传递
 echo $sql;
 // $sql = "INSERT INTO person (name, age, year, place, sex)
-// VALUES ('John', '15', '1945', 'jiangshu', 'm')";
+// VALUES ('John', '12', '1942', 'jiangshu', 'm')";
 if ($conn->query($sql) === TRUE) {
     echo "新记录插入成功";
 } else {
@@ -639,13 +639,13 @@ if ($result->num_rows > 0) {
 					<div class="content">
 						<section>
 							<ol>
-								<li>打开apache的<code>httpd.conf</code>文件，在<code>Listen 80</code>处另起一行输入<code>Listen 8095</code>
-									监听8095端口/</li>
+								<li>打开apache的<code>httpd.conf</code>文件，在<code>Listen 80</code>处另起一行输入<code>Listen 8092</code>
+									监听8092端口/</li>
 								<li>在httpd.conf文件最后一行添加：
-									<pre><code>NameVirtualhost localhost:8095 # 虚拟主机端口
-&lt;virtualhost localhost:8095>
+									<pre><code>NameVirtualhost localhost:8092 # 虚拟主机端口
+&lt;virtualhost localhost:8092>
 	documentroot E:/web  #网站目录绝对路径 ~注意斜杠的方向/
-	servername locahost:8095 #对应监听的端口
+	servername locahost:8092 #对应监听的端口
 &lt;/virtualhost>
 </code></pre>
 								</li>
@@ -742,7 +742,7 @@ if ($result->num_rows > 0) {
 								<li>CSS书写顺序：位置属性-->大小-->文字系列-->背景-->其他</li>
 								<li>表现与结构完全分离，代码中不涉及任何的表现元素，如<code>style</code>、<code>font</code>、<code>bgColor</code>、<code>border</code>等
 									除非特殊需要，不在dom中写css 如: <br><code>&lt;div style="xx">//尽量避免</code></li>
-								<li><code>&lt;h1></code>到<code>&lt;h5></code>的定义，应遵循从大到小的原则，体现文档的结构，并有利于搜索引擎的查询。</li>
+								<li><code>&lt;h1></code>到<code>&lt;h2></code>的定义，应遵循从大到小的原则，体现文档的结构，并有利于搜索引擎的查询。</li>
 								<li>NEC规范
 									<pre><code>
 1.分类的命名方法：使用单个字母+"-"为前缀
@@ -764,7 +764,7 @@ if ($result->num_rows > 0) {
 <br>4.相同语义的不同类命名
 方法：直接加数字或字母区分即可（如：.m-list、.m-list2、.m-list3等，都是列表模块，但是是完全不一样的模块）。
 其他举例：.f-fw0、.f-fw1、.s-fc0、.s-fc1、.m-logo2、.m-logo3、u-btn、u-btn2等等。
-<br>5.防止污染和被污染
+<br>2.防止污染和被污染
 当模块或元件之间互相嵌套，且使用了相同的标签选择器或其他后代选择器，那么里面的选择器就会被外面相同的选择器所影响。
 所以，如果你的模块或元件可能嵌套或被嵌套于其他模块或元件，那么要慎用标签选择器，必要时采用类选择器，并注意命名方式，可以采用.m-layer .layerxxx、.m-list2 .list2xxx的形式来降低后代选择器的污染性。
 	</code></pre>
@@ -773,7 +773,7 @@ if ($result->num_rows > 0) {
 									<pre><code>
 给图片加上alt标签
 尽量使用 class 不要用 id 
-去掉小数点前的“0” ，如："rgba(0,0,0,.5)"
+去掉小数点前的“0” ，如："rgba(0,0,0,.2)"
 尽量使用英文命名原则，并合理简写
 颜色采用16进制简写，如： "#fff"
 使用 "-" 代替 "_"，如：".g-title"
@@ -802,7 +802,7 @@ if ($result->num_rows > 0) {
 功能区：shop 
 </code></pre>
 							</p>
-							<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;无意中看到一种叫做"面向属性的CSS命名方式"，原理是将具体的属性拆分例如：<code>{left:50px}</code>、<code>margin-right:10px</code>,直接写出<code>.l</code>、<code>.mr</code>虽然在某些场合下可能不太实用，但思路很巧妙。其原因主要体现在以下三点：
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;无意中看到一种叫做"面向属性的CSS命名方式"，原理是将具体的属性拆分例如：<code>{left:20px}</code>、<code>margin-right:10px</code>,直接写出<code>.l</code>、<code>.mr</code>虽然在某些场合下可能不太实用，但思路很巧妙。其原因主要体现在以下三点：
 								<ol>
 									<li>
 										<h4>限制重用</h4>我们会使用层级(#test
@@ -825,7 +825,7 @@ if ($result->num_rows > 0) {
 								<br>
 								<a href="http://www.zhangxinxu.com/wordpress/2010/09/精简高效的css命名准则方法/"
 									target="_blank">张鑫旭博客</a>
-								<br><a href="https://www.zhihu.com/question/19586885" target="_blank">知乎</a></p>
+								<br><a href="https://www.zhihu.com/question/19286882" target="_blank">知乎</a></p>
 
 						</section>
 					</div>
@@ -1021,7 +1021,7 @@ head.appendChild(scir)</code>
 								<br>2.进程有独立的地址空间，一个进程崩溃后，在保护模式下不会对其它进程产生影响
 								<br>3.线程有自己的堆栈和局部变量，但线程之间没有单独的地址空间，一个线程死掉就等于整个进程死掉
 								<br>4.对于一些要求同时进行并且又要共享某些变量的并发操作，只能用线程，不能用进程
-								<br>5.多进程的程序要比多线程的程序健壮，但在进程切换时，耗费资源较大，效率要差一些</p>
+								<br>2.多进程的程序要比多线程的程序健壮，但在进程切换时，耗费资源较大，效率要差一些</p>
 
 						</section>
 					</div>
@@ -1036,48 +1036,13 @@ head.appendChild(scir)</code>
 					<p><span id="b"></span></p>
 					<p><span id="c"></span></p>
 				</div>
-			</div> <!-- text-box -->
-
-
-
-			<!-- <div class="text-box">
-				<div class="text-head">
-					<img src="../icon/head.png" alt="头像" class="img-head">
-					<h3>模板</h3>
-					<p class="text-date">2020.6.18</p>
-					<div class="lable-box">
-						<span class="cell bg-r">JS</span>
-						<span class="cell bg-b">CSS</span>
-						<span class="cell bg-g">HTML</span>
-					</div>
-				</div>
-				<div class="text-body">
-					<div class="content">					
-						<section>
-
-						</section>						
-					</div>
-				</div>
-				<div class="open">
-					<p class="open-a">展开全部</p>
-					<p class="close-a" style="display:none">收起</p>
-				</div>
-					
-				<div class="text-foot">
-					<p><span id="a"></span></p>
-					<p><span id="b"></span></p>
-					<p><span id="c"></span></p>
-				</div>	
-			</div>  -->
-			<!-- text-box -->
-
-
+			</div>
 
 			<div class="text-box">
 				<div class="text-head">
 					<img src="../icon/head.png" alt="头像" class="img-head">
 					<h3>github使用</h3>
-					<p class="text-date">2020.5.28</p>
+					<p class="text-date">2020.2.28</p>
 					<div class="lable-box">
 						<span class="cell bg-r">JS</span>
 						<span class="cell bg-b">CSS</span>
@@ -1093,7 +1058,7 @@ head.appendChild(scir)</code>
 								<li>github上建立仓库</li>
 								<li>有的教程说要建立本地ssh key私钥和公钥，可跳过</li>
 								<li>找一个你要放代码的文件夹右键 <code>git bash here</code> 打开msysgit</li>
-								<li>将你在github上新建的仓库下载到本地，<code>git clone 'https://github.com/rover95/Personal-website.git'</code>
+								<li>将你在github上新建的仓库下载到本地，<code>git clone 'https://github.com'</code>
 								</li>
 								<li>在刚才的文件夹中会多一个你仓库名的Personal-website文件夹，把你要上传的文件全复制进去</li>
 								<li>msysgit输入 <code>cd Personal-website</code> 进入这个文件夹 <code>git add . </code>把所有文件添加进来
@@ -1126,7 +1091,7 @@ head.appendChild(scir)</code>
 				<div class="text-head">
 					<img src="../icon/unb.png" alt="头像" class="img-head">
 					<h3>网页宽高获取</h3>
-					<p class="text-date">2020.5.25</p>
+					<p class="text-date">2020.2.22</p>
 					<div class="lable-box">
 						<span class="cell bg-r">JS</span>
 						<!-- <span class="cell bg-b">CSS</span>
@@ -1181,16 +1146,16 @@ head.appendChild(scir)</code>
 
 	<footer>
 		<div class="icon-box">
-			<a href="http://weibo.com/u/5366939550" target="_blank" class="icon-cell bg-a icon-xinlang"></a>
+			<a href="http://weibo.com/u/2366939220" target="_blank" class="icon-cell bg-a icon-xinlang"></a>
 			<a href="https://rover-rx.tuchong.com/" target="_blank" class="icon-cell bg-a icon-tuchong"></a>
 			<a href="#" class="icon-cell bg-a icon-weixin" onclick="wei()"></a>
-			<a href="http://wpa.qq.com/msgrd?v=3&uin=1399564343&site=oicqzone.com&menu=yes"
+			<a href="http://wpa.qq.com/msgrd?v=3&uin=1399264343&site=oicqzone.com&menu=yes"
 				class="icon-cell bg-a icon-qq"></a>
-			<a href="https://github.com/rover95" target="_blank" class="icon-cell bg-a icon-github"></a>
+			<a href="https://github.com/rover92" target="_blank" class="icon-cell bg-a icon-github"></a>
 		</div>
-		<p>Designed and Powered By ROVER95. Check out this site’s code on <a
-				href="https://github.com/rover95/Personal-website">Github</a>.</p>
-		<p>Copyright © 2020 Rover95. All rights reserved.</p>
+		<p>Designed and Powered By ROVER92. Check out this site’s code on <a
+				href="https://github.com/rover92/Personal-website">Github</a>.</p>
+		<p>Copyright © 2020 Rover92. All rights reserved.</p>
 	</footer>
 	<div class="weixin">
 		<p>扫一扫添加微信好友</p>
@@ -1228,7 +1193,7 @@ head.appendChild(scir)</code>
 			}
 			R(p).find('.open-a').css('display', 'block');
 			this.style.display = "none";
-			box.style["max-height"] = '150px';
+			box.style["max-height"] = '120px';
 		})
 		//相应菜单按钮
 		R('.min-nav').toggle(function () {
@@ -1258,7 +1223,7 @@ head.appendChild(scir)</code>
 				//data=data+'';
 				//console.log(data);
 				ajax({
-					url: 'http://139.196.85.218/data-pw/index.php',
+					url: 'http://139.196.82.218/data-pw/index.php',
 					type: 'post',
 					data: {
 						"json": data,
@@ -1278,7 +1243,7 @@ head.appendChild(scir)</code>
 		var _hmt = _hmt || [];
 		(function () {
 			var hm = document.createElement("script");
-			hm.src = "https://hm.baidu.com/hm.js?d7ea810a5cc9761de62f1380f4d9bf50";
+			hm.src = "https://hm.baidu.com/hm.js?d7ea810a2cc9761de62f1380f4d9bf20";
 			var s = document.getElementsByTagName("script")[0];
 			s.parentNode.insertBefore(hm, s);
 		})();
