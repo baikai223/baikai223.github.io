@@ -1,10 +1,4 @@
-/*! * * * * * * * * * * * * * * * * * * * *\  
-  CSShake :: Package
-  v1.5.0
-  CSS classes to move your DOM
-  (c) 2015 @elrumordelaluz
-  http://elrumordelaluz.github.io/csshake/
-  Licensed under MIT
+
 \* * * * * * * * * * * * * * * * * * * * */
 .shake, .shake-little, .shake-slow, .shake-hard, .shake-horizontal, .shake-vertical, .shake-rotate, .shake-opacity, .shake-crazy, .shake-chunk {
   display: inline-block;
